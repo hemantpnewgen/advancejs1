@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Javascript</title>
+	<script type="text/javascript">
+		var ck=function (email){
+							var cd=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+							return cd.test(email);
+						};	
+		(function(){ 
+			var email=prompt("Enter the email:");
+			var check=ck(email);
+			if(check==true)
+				alert("Valid Email Address");
+			else
+				alert("Invalid Email Address");
+		})();	
+	</script>
+</head>
+<body>
+</body>
+</html>

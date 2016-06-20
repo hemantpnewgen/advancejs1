@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>HTML5 Assignment</title>
+	<script type="text/javascript">
+	function validateForm() 
+	{
+		var p=document.getElementById('uname'); 
+		if(p.value==null || p.value=='')
+		{
+			alert('This field should not be left empty');
+			return false;
+		}
+		var q=document.getElementById('email'); 
+		var qt=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+		if(!qt.test(q.value))
+		{
+			alert('Invalid email address');
+			return false;
+		}
+		var r=document.getElementById('mob'); 
+		if(r.value==null || r.value=='')
+		{
+			alert('This field should not be left empty');
+			return false;
+		}
+		return true;
+	}
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1>System Registration</h1>
+	</header>
+		<form id="frm" name="myForm" action="" method="" id="form1" autocomplete onsubmit="return validateForm()">
+			<input type="text" placeholder="Username" name="uname" maxlength="40" autocomplete required><br><br>
+			<input type="text" placeholder="Email" name="email" maxlength="40" autocomplete required ><br><br>
+			<input type="text" placeholder="Mobile No." name="mob" minlength="10" maxlength="10" required><br><br>
+			<input type="text" placeholder="Address" name="address"><br><br>
+			<input type="Submit" value="Register" id="button">
+		</form>
+</body>
+</html>
