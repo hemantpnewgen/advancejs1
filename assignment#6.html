@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment#6</title>
+	
+</head>
+<body>
+<form>
+	First Name: <input type="text" id="fname"><br>
+	Last Name: <input type="text" id="lname"><br>
+	Email Id: <input type="text" id="email"><br>
+	Phone Number: <input type="text" id="number"><br>
+	<input type="Submit" id="button">
+</form>
+<script type="text/javascript">
+		(function(){
+					function person(fname,lname,email,num){
+						this.fname=fname;
+						this.lname=lname;
+						this.email=email;
+						this.number=num;
+					}
+					var Hemant=new person('Hemant','Prajapati','hemantp231293@gmail.com',9694429818);
+					document.getElementById('fname').value=Hemant.fname;
+					document.getElementById('lname').value=Hemant.lname;
+					document.getElementById('email').value=Hemant.email;
+					document.getElementById('number').value=Hemant.phone;
+		})();
+	</script>
+</body>
+</html>

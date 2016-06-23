@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment#5</title>
+	<script type="text/javascript">
+		(function(){
+					function outer_fun(){
+						var a=23;
+						return function inner_fun(){
+									var b=1993;
+									return a+"*"+b+"="+(a*b);
+								}
+					}
+					var display=outer_fun();
+					alert(display());
+		})();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
