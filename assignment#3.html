@@ -1,44 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>HTML5 Assignment</title>
-	<script type="text/javascript">
-	function validateForm() 
-	{
-		var p=document.getElementById('uname'); 
-		if(p.value==null || p.value=='')
-		{
-			alert('This field should not be left empty');
-			return false;
-		}
-		var q=document.getElementById('email'); 
-		var qt=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-		if(!qt.test(q.value))
-		{
-			alert('Invalid email address');
-			return false;
-		}
-		var r=document.getElementById('mob'); 
-		if(r.value==null || r.value=='')
-		{
-			alert('This field should not be left empty');
-			return false;
-		}
-		return true;
-	}
-	</script>
-
+	<title>Advanced Javascript</title>
 </head>
 <body>
-	<header>
-		<h1>System Registration</h1>
-	</header>
-		<form id="frm" name="myForm" action="" method="" id="form1" autocomplete onsubmit="return validateForm()">
-			<input type="text" placeholder="Username" name="uname" maxlength="40" autocomplete required><br><br>
-			<input type="text" placeholder="Email" name="email" maxlength="40" autocomplete required ><br><br>
-			<input type="text" placeholder="Mobile No." name="mob" minlength="10" maxlength="10" required><br><br>
-			<input type="text" placeholder="Address" name="address"><br><br>
-			<input type="Submit" value="Register" id="button">
-		</form>
+	<form action="#" method="post" onsubmit="<script>function abc{alert('123');}</script>">
+		Name:   <input type="text" id="name" name="name" onblur="(
+			function(){
+							var nm=document.getElementById('name'); 
+							if(nm.value==null || nm.value=='')
+							{
+								alert('Invalid Name');
+								nm.focus();
+							}
+					})();"><br>
+		Email:  <input type="text" name="email" id="email" onblur="(
+			function(){
+							var ml=document.getElementById('email'); 
+							var chk=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+						    if(!chk.test(ml.value))
+							{
+								alert('Invalid email address');
+								ml.focus();
+							}
+				    })();"><br>
+		Phone:  <input type="text" name="Number" id="number" minlength="10" maxlength="10" onblur="(
+			function(){
+						    var num=document.getElementById('number'); 
+						    var re = /^[0-9]$/;
+						    var re2 = /^[a-zA-Z]$/;
+    						if(re.test(num.value) && !re2.test(num.value) )
+							{
+								alert('Invalid Phone Number');
+							 	num.focus();
+							}
+					})();"><br>
+		Address: <textarea rows="5" cols="40"></textarea><br>
+		<input type="submit" id="button" value="Submit">
+	</form>
 </body>
 </html>
